@@ -68,8 +68,8 @@ app.post('/', async(req, res) => {
 
 console.log(process.env.MONGO_URI);
 
-app.listen(9000, () => {
+app.listen(2222, () => {
   connectDB();
-  console.log('Server is running on http://localhost:9000 hello');
+  console.log('Server is running on http://localhost:2222 hello');
 });
 

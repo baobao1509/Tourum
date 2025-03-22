@@ -17,17 +17,9 @@ const postsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  subtitle: {
-    type: [String],
-    default: [],
-  },
   content: {
-    type: [String],
-    default: [],
-  },
-  imageUrl: {
-    type: [String],
-    default: [],
+    type: String,
+    required: true,
   },
   authorId: {
     type: mongoose.Schema.Types.ObjectId,
