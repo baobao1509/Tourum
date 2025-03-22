@@ -22,4 +22,4 @@ const likeSchema = new mongoose.Schema({
 
 const Like = mongoose.model("Like", likeSchema);
 
-export { Place, Topic, Comment, Like };
+export default Like;

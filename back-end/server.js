@@ -11,7 +11,7 @@ app.use(express.json());
 app.get('/', async (req, res) => {
   try {
     const posts = await Posts.find({});
-    res.status(201).json({ message:"Succes", data:posts });
+    res.status(201).json({ message:"Success", data:posts });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
@@ -27,7 +27,7 @@ app.put('/:id', async(req, res) => {
   try{
     await Posts.findByIdAndUpdate
     (id, post, {new:true});
-    return res.status(201).send({success:true ,message: 'Update succes'})}
+    return res.status(201).send({success:true ,message: 'Update success'})}
     catch (error) {
       res.status(409).json({message: error.message});
     }
@@ -41,7 +41,7 @@ app.delete('/:id',async(req, res) => {
 
   try{
     await Posts.findByIdAndDelete(id);
-    return res.status(201).send({success:true ,message: 'Delete succes'});
+    return res.status(201).send({success:true ,message: 'Delete success'});
   }catch (error) {
     res.status(409).json({message: error.message});
   }
@@ -57,7 +57,7 @@ app.post('/', async(req, res) => {
 
   try {
     await newPost.save();
-    return res.status(201).send({success:true ,message: 'Insert succes'});
+    return res.status(201).send({success:true ,message: 'Insert success'});
   }
   catch (error) {
     res.status(409).json({message: error.message});
@@ -68,8 +68,7 @@ app.post('/', async(req, res) => {
 
 console.log(process.env.MONGO_URI);
 
-app.listen(2222, () => {
+app.listen(9000, () => {
   connectDB();
-  console.log('Server is running on http://localhost:2222 hello');
+  console.log('Server is running on http://localhost:9000 hello');
 });
-
