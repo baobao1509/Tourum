@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react
 import "./App.css";
 import WriteBlog from "./components/ui/User/writeBlog/writeBlog";
 
-<<<<<<< HEAD
+
 const App = () => {
   const featuredDestinations = [
     {
@@ -198,13 +198,6 @@ const App = () => {
         <Route path="/write-blog" element={<WriteBlog />} />
       </Routes>
     </Router>
-=======
-function App (){
-  return (
-    <div className="App">
-      <div>Hello world</div>
-    </div>
->>>>>>> 65084653dbc5bde491b7b3bbd50893738276abd9
   );
 }
 
